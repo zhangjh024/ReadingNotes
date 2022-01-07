@@ -207,3 +207,132 @@ void test01()
 }
 ```
 
+
+
+
+
+#### 3.1.8
+
+#### 3.1.9 string 子串
+
+
+
+函数原型
+
+- string substr(int pos = 0,int n = pos) const;
+
+
+
+```cpp
+void test()
+{
+  string str1 = "abcdef";
+  
+  string str2 = str1.substr(1,3);
+  
+  //此时str为 “bcd”
+}
+
+void test01()
+{
+  string email = "zhangjh@qq.com";
+  
+  int pos = email.find("@");
+  
+  string name = email.substr(0,pos);
+  
+  cout<<name<<endl;
+}
+```
+
+
+
+### 3.2 vector
+
+
+
+#### 3.2.1 vector 基本概念
+
+
+
+动态扩展：
+
+并不是原空间后面接续新空间，而是找更大的内存空间，拷贝至新空间，释放原空间。
+
+
+
+<img src="/Users/zhangjinghao/Library/Application Support/typora-user-images/截屏2022-01-06 下午12.14.26.png" alt="截屏2022-01-06 下午12.14.26" style="zoom: 50%;" />
+
+
+
+
+
+#### 3.2.2 vector构造函数
+
+函数原型
+
+- vector<T> v 
+- vector(v.begin(),v.end());
+- vector(n,elem);
+- vector(const vector &vec);
+
+#### 3.2.3 vector赋值操作
+
+函数原型
+
+- vector& operator = (const vector &vec);
+- assign(begin,end);
+
+```cpp
+void test01(){
+  
+  vector<int> v1;
+  for(int i=0;i<10;i++)
+  {
+    v1.push_back(i);
+  }
+  
+  vector<int> v2 = v1 ;  // 第一种直接赋值方式
+  
+  vector<int>v3;
+  
+  v3.assgin(v1.begin(),v1.begin()+3);  //第二种赋值方式
+  
+}
+
+void print(vector<int> &v)
+{
+  for(vector<int>::iterator it= v.begin();it!=v.end();it++)
+    cout<<*it<<endl;
+}
+```
+
+
+
+#### 3.2.4 vector容量和大小
+
+
+
+函数原型
+
+- empty()
+- capacity()
+- size()
+- resize(int n)
+
+```cpp
+void test01()
+{
+  vector<int> v1;
+  
+}
+
+
+
+
+
+
+
+
+```
+
