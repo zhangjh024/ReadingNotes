@@ -336,3 +336,47 @@ void test01()
 
 ```
 
+### 3.7 list容器
+
+优点：插入删除花费小。
+
+缺点：遍历没有数组快，占用空间大。
+
+#### 3.7.1 list双向循环链表
+
+构造函数原型
+
+- list<T> let;
+- list<T> l2(let.begin(), let. end());    //按区间拷贝构造，
+- list<T> l3(l2); // 拷贝构造
+
+```cpp
+```
+
+#### 3.7.2 list赋值和交换
+
+函数原型
+
+- assign(begin,end);
+- list &operator = (const list &lst);
+- swap(lst);
+
+
+
+#### 3.7.4 list大小操作
+
+- resize(num);       //重新指定容器的长度为num，如果变长，就用默认值填充
+- resize(num,elem);   // 用elem填充
+
+#### 3.7.5 list插入和删除
+
+- push_back()
+- pop_back()
+- push_front()
+- pop_front()
+- insert(pos, elem);  // 在pos位置插入elem,返回新的位置
+- insert(pos,n,elem)  // 无返回值
+- clear()
+- erase(legend) // 返回下一个数据的位置
+- erase(pos). //返回下一个数据的位置
+- remove(elem). //删除所有elem值的元素
